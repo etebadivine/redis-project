@@ -4,8 +4,6 @@ import Model.User;
 import org.springframework.data.redis.core.HashOperations;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Repository;
-
-import java.util.List;
 import java.util.Map;
 
 
@@ -25,7 +23,6 @@ public class UserRepositoryImpl implements UserRepository {
     @Override
     public void save(User user) {
         hashOperations.put("USER",user.getId(),user);
-
     }
 
     @Override

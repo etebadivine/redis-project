@@ -1,8 +1,8 @@
 package Repository;
 
 import Model.User;
-
 import java.util.Map;
+
 
 public interface UserRepository {
 
