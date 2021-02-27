@@ -7,11 +7,21 @@ public class User implements Serializable {
     private String id;
     private String name;
     private Long salary;
+    private String dateOfBirth;
 
-    public User(String id, String name, Long salary) {
+    public String getDateOfBirth() {
+        return dateOfBirth;
+    }
+
+    public User(String dateOfBirth) {
+        this.dateOfBirth = dateOfBirth;
+    }
+
+    public User(String id, String name, Long salary, String dateOfBirth) {
         this.id = id;
         this.name = name;
         this.salary = salary;
+        this.dateOfBirth = dateOfBirth;
     }
 
     public String getId() {

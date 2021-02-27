@@ -19,14 +19,14 @@ public class UserController {
     @GetMapping("/add/{id}/{name}")
     public User add(@PathVariable("id") final String id,
                     @PathVariable("name") final String name){
-        userRepository.save(new User(id,name,20000L));
+        userRepository.save(new User(id,name,20000L,"03-05-2000"));
         return userRepository.findById(id);
     }
 
     @GetMapping("/update/{id}/{name}")
     public User update(@PathVariable("id") final String id,
                     @PathVariable("name") final String name){
-        userRepository.update(new User(id,name,60000L));
+        userRepository.update(new User(id,name,60000L,"26-12-1997"));
         return userRepository.findById(id);
     }
 
